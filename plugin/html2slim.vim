@@ -9,6 +9,7 @@ function! HTML2slim() range
   ruby execute
 
   execute 'vnew'
+  set syntax=slim
   call setline(1, slim_content)
 endfunction
 command! -buffer -bar -bang -range HTML2slim :<line1>,<line2>call HTML2slim()
